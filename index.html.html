@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/functions.js"></script>
+</head>
+
+<body>
+	<form id="check_form">
+	  <div class="form-group">
+		<label for="market">Market</label>
+		<select class="form-control" id="market" aria-describedby="market" name="market">
+		  <option selected value="BTC">BTC</option>
+		  <option  value="Ether">ETH</option>
+		  <option  value="USDT">USDT</option>
+		  <option  value="USD">USD</option>
+		</select>
+		<label for="crypto">Cryptocurrencies</label>
+		<select class="form-control" id="crypto" aria-describedby="crypto" name="crypto"></select>
+	  </div>
+	  <button type="submit" name="load" class="btn btn-primary">Load Cryptocurrencies</button>
+	  <button type="submit" name="selected" class="btn btn-primary">Analyze Selected</button>
+	  <button type="submit" name="all" class="btn btn-primary">Analyze ALL</button>
+	</form>
+
+	<textarea id="result" rows="50" cols="50"></textarea>
+</body>
