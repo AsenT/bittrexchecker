@@ -138,9 +138,8 @@ function checkIfMarketIsWin($currMarketData,$sumQuantityBuyOrdersMain100,$sumQua
 
 	$minBaseVolume = getMinBaseVolume();
 	
- return true;
 	
-	if(($coefDiffSumCalcMain100 >= $coefDiffSumMain100 && $coefDiffSumCalcBase100 >= $coefDiffSumBase100 && $coefDiffSumCalcMain75 >= $coefDiffSumMain75 && $coefDiffSumCalcBase75 >= $coefDiffSumBase75 && $coefDiffSumCalcMain50 >= $coefDiffSumMain50 && $coefDiffSumCalcBase50 >= $coefDiffSumBase50 && $coefDiffSumCalcMain25 >= $coefDiffSumMain25 && $coefDiffSumCalcBase25 >= $coefDiffSumBase25 && $currMarketData -> BaseVolume >= $minBaseVolume)||$GLOBALS['markets'][0] == $_POST['selected']){
+	//if(($coefDiffSumCalcMain100 >= $coefDiffSumMain100 && $coefDiffSumCalcBase100 >= $coefDiffSumBase100 && $coefDiffSumCalcMain75 >= $coefDiffSumMain75 && $coefDiffSumCalcBase75 >= $coefDiffSumBase75 && $coefDiffSumCalcMain50 >= $coefDiffSumMain50 && $coefDiffSumCalcBase50 >= $coefDiffSumBase50 && $coefDiffSumCalcMain25 >= $coefDiffSumMain25 && $coefDiffSumCalcBase25 >= $coefDiffSumBase25 && $currMarketData -> BaseVolume >= $minBaseVolume)||$GLOBALS['markets'][0] == $_POST['selected']){
 		
 		echo "--------START--------",PHP_EOL;
 		echo $currMarketData -> MarketName,PHP_EOL;
@@ -154,7 +153,7 @@ function checkIfMarketIsWin($currMarketData,$sumQuantityBuyOrdersMain100,$sumQua
 		echo "coefDiffSumCalcBase25 -> " . $coefDiffSumCalcBase25,PHP_EOL;
 		echo "coefDiffSumCalcMain25 -> " . $coefDiffSumCalcMain25,PHP_EOL;
 		return true;
-	}
+	//}
 	else{
 		return false;
 	}
@@ -191,14 +190,15 @@ function extractInfoFromMarket($currMarketData,$medianRateBuyOrders100,$medianRa
 		echo "25 BUY PRICE -> " . number_format($medianRateBuyOrders25,8,'.',','),PHP_EOL;
 		echo "25 SELL PRICE -> " . number_format($medianRateSellOrders25,8,'.',','),PHP_EOL;
 			
-	
+	/*
 	if($loseMargin25/$winMargin25 > 1 && $GLOBALS['markets'][0] != $_POST['selected']){
 		$winMarkets[] = $currMarketData -> MarketName;
 		echo PHP_EOL;
 		echo "PLAY ON IT!",PHP_EOL;
 		echo PHP_EOL;
 	}
-	
+     */
+	 
 	echo "--------END--------",PHP_EOL;
 	echo PHP_EOL;
 	echo PHP_EOL;
